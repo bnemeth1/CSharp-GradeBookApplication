@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GradeBook.GradeBooks
 {
-    class RankedGradeBook : BaseGradeBook
+    public class RankedGradeBook : BaseGradeBook
     {
         public RankedGradeBook(string name) : base(name)
         {
@@ -26,9 +26,9 @@ namespace GradeBook.GradeBooks
 
             foreach (var student in Students )
             {
-                if (student.AverageGrade > averageGrade)
+                if (student.AverageGrade >= averageGrade)
                 {
-                    countover++;
+                    countover=countover+1;
                 }
             }
 
